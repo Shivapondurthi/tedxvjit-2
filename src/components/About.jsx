@@ -1,6 +1,6 @@
 import React from 'react'
 import FAQItem from './Faq.jsx';
-import videoBackground from '../images/about_us.mp4';
+// import videoBackground from '../images/about_us.mp4';
 const About = () => {
   return (
 <div className="relative">
@@ -11,7 +11,7 @@ const About = () => {
         loop
         className="fixed top-0 left-0 w-full h-full object-cover z-[-1]" // Ensures the video stays fixed and in the background
       >
-        <source src={videoBackground} type="video/mp4" />
+        <source src="/aboutus/about_us.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

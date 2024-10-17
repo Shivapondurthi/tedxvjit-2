@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import tedxvjitlogo from "../images/Tedxvjit.png"; // Replace with your logo path
-import tedxvjit from "../images/TEDxVJIT_Navbar_About.png"; // Replace with your logo path
-import backgroundVideo from "../images/homeBG3d.mp4"; // Replace with your video path
-import Power_of_Persistence from "../images/Power_of_Persistence.png"; // Replace with your video path
+import '../style.css';
+import '../responsive.css';
+// import tedxvjitlogo from "../images/Tedxvjit.png"; // Replace with your logo path
+// import tedxvjit from "../images/TEDxVJIT_Navbar_About.png"; // Replace with your logo path
+// import backgroundVideo from "../images/homeBG3d.mp4"; // Replace with your video path
+// import Power_of_Persistence from "../images/Power_of_Persistence.png"; // Replace with your video path
 
 const Home = () => {
   // carosuell
@@ -16,19 +18,19 @@ const Home = () => {
         loop
         muted
       >
-        <source src={backgroundVideo} type="video/mp4" />
+        <source src="/primary/homeBG3d.mp4" type="video/mp4" />
       </video>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white ">
-        <img className="h-36 mb-4" src={tedxvjitlogo} alt="TEDxVJIT" />
+        <img className="h-36 mb-4" src="/primary/Tedxvjit.png" alt="TEDxVJIT" />
         {/*========================participate button ================================= */}
       </div>
       <div className="relative flex flex-col md:flex-row h-screen">
         {/* Left Div - Image */}
         <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center">
           <img
-            src={Power_of_Persistence} // Replace with your image URL
+            src="/primary/Power_of_Persistence.png" // Replace with your image URL
             alt="Placeholder"
             className="max-h-full max-w-full object-cover"
           />
@@ -62,7 +64,7 @@ const Home = () => {
                 <p className="text-3xl md:text-4xl mt-4 md:mt-0">What is</p>
                 <img
                   className="ml-0 md:ml-4 mt-4 md:mt-0 w-48 h-10"
-                  src={tedxvjit}
+                  src="/primary/TEDxVJIT_Navbar_About.png"
                   alt="TEDx VJIT"
                 />
               </div>
@@ -102,6 +104,118 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <section className="speakers reveal">
+        <div className="container">
+          <div className="speakers-heading mt-10" style={{ display: 'flex', justifyContent: 'center' }}>
+            <h1 className='mt-5'>MEDIA</h1>
+          </div>
+          <div className="containers">
+            <div className="slider-container">
+              {[
+                "/Resources/media/1.jpg",
+                "/Resources/media/2.jpg",
+                "/Resources/media/3.jpg",
+                "/Resources/media/4.jpg",
+                "/Resources/media/5.jpg",
+                "/Resources/media/6.jpg",
+                "/Resources/media/7.jpg",
+                "/Resources/media/8.jpg",
+                "/Resources/media/9.jpg",
+                "/Resources/media/10.jpg"
+              ].map((imageSrc, index) => (
+                <div className="single-team" key={index} style={{ backgroundColor: 'transparent', width: '350px' }}>
+                  <img
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    src={imageSrc}
+                    alt={`media-${index}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+            {/* Map and Registration Section */}
+            <section className="map-registration reveal" id="maps">
+  <div className="container mx-auto text-center">
+    <div className="flex flex-wrap justify-center">
+      {/* Buttons Section */}
+      <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
+        <p className="head-1 text-xl font-semibold">Participate Now</p>
+        <div className="pt-4">
+          <a
+            href="javascript:void( window.open( 'https://konfhub.com/tedxvjit', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) )"
+            className="hover-btn-change-color"
+          >
+            <button
+              type="button"
+              className="btn btn-custom bg-transparent text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300"
+            >
+              As Attendee
+            </button>
+          </a>
+        </div>
+        <div className="pt-4">
+          <a
+            href="javascript:void( window.open( 'https://forms.gle/gQ96sCnS3idoYLiL9', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) )"
+            className="hover-btn-change-color"
+          >
+            <button
+              type="button"
+              className="btn btn-custom bg-transparent text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300"
+            >
+              As Sponsor
+            </button>
+          </a>
+        </div>
+        <div className="pt-4">
+          <a
+            href="javascript:void( window.open( 'https://forms.gle/j9xivk5LCN6Qz7Wn6', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) )"
+            className="hover-btn-change-color"
+          >
+            <button
+              type="button"
+              className="btn btn-custom bg-transparent text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300"
+            >
+              As Speaker
+            </button>
+          </a>
+        </div>
+      </div>
+
+      {/* Map Section */}
+      <div className="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
+        <div className="map_box_container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121832.2780266916!2d78.28233073667944!3d17.399368808179574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb95a278ecef95%3A0x6cd763949617029a!2sVidya%20Jyothi%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1715679876574!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            className="border border-gray-300"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Venue Section */}
+      <div className="w-full lg:w-1/3">
+        <p className="venue-text text-center text-xl font-semibold">Venue</p>
+        <div className="bg-transparent shadow-lg rounded-lg mt-4 p-4">
+          <p className="text-lg text-center">
+            Vidya Jyothi Institute of Technology, Aziz Nagar, C.B. post, Chilkur
+            Road, Hyderabad – 500075, Telangana
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

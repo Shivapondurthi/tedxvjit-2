@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import tedxvjitlogo from '../images/TEDxVJIT_Navbar_About.png';
+// import tedxvjitlogo from '../images/TEDxVJIT_Navbar_About.png';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center justify-around h-16">
           {/* Logo */}
           <div className="flex items-center">
-           <a href="/"> <img className="h-10 w-auto" src={tedxvjitlogo} alt="TEDxVJIT" /></a>
+           <a href="/"> <img className="h-10 w-auto" src="/primary/Tedxvjit.png" alt="TEDxVJIT" /></a>
           </div>
 
           {/* Desktop Navigation Links */}

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import videoBackground from "../images/contact_us.mp4";
+// import videoBackground from "../images/contact_us.mp4";
 
 const Contact = () => {
   const nameRef = useRef(null);
@@ -23,7 +23,7 @@ const Contact = () => {
         loop
         className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
       >
-        <source src={videoBackground} type="video/mp4" />
+        <source src="/primary/contact_us.mp4" type="video/mp4" />
         
       </video>
 
@@ -33,7 +33,7 @@ const Contact = () => {
             <img
               className="img-fluid pb-2"
               id="pic"
-              src="./Ressources/vjitmedia/TEDxVJIT_Navbar_About.png"
+              src="/primary/TEDxVJIT_Navbar_About.png"
               alt=""
             />
             <span className="mt-3 text-white text-2xl">CONTACT US</span>
